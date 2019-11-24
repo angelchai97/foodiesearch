@@ -77,6 +77,8 @@ app.post('/deleteAll',async (req,res)=>{
   var a = await Search.find({}).remove();
   res.send(a)
 })
-app.listen(5000, () => {
-  console.log('server listening on port 5000');
+
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => {
+  console.log('server listening on port ${PORT}');
 });
