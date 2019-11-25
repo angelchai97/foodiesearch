@@ -73,6 +73,12 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.footer {
+  padding: 20px;
+  background-color: rgba(0,0,0,0.6)
+  
+}
 .search {
   background-color: rgb(241, 241, 169);
 }

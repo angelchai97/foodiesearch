@@ -4,6 +4,7 @@ import "react-table/react-table.css"
 import { access } from 'fs';
 import axios from 'axios';
 
+// page showing the user searching history table with delete button to choose to delete selected record from database
 class History extends Component{
     constructor(props){
         super(props);

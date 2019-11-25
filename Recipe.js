@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const db = 'mongodb+srv://ShuenChai:12345@cluster0-tqflq.mongodb.net/recipe?retryWrites=true&w=majority';
 
+//Connect to MongoDB database
 mongoose
   .connect(
     db,

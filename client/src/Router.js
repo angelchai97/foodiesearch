@@ -5,6 +5,8 @@ import App from "./App";
 import EachRecipe from "./EachRecipe";
 import History from './History';
 
+//Router use to route to EachRecipe.js page (show detail of selected recipe) and History.js page (show search history table)
+
 const Router = () => (
     <BrowserRouter>
         <Switch>

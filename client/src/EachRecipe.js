@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 
+// Page for showing the recipe detail for selected food recipe with ingredients and publisher link
 class EachRecipe extends React.Component {
     state = {
         activeRecipe: []

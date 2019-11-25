@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import ReactTable from 'react-table';
-// import 'react-table/react-table.css';
 import axios from 'axios';
 import Popup from 'react-popup';
 import { Button } from 'reactstrap';
@@ -9,6 +7,7 @@ import './Popup.css';
 import Recipes from "./Recipes";
 import { Link } from "react-router-dom";
 
+// Handle search function and delete record function
 class App extends Component {
   constructor() {
     super();
@@ -25,6 +24,7 @@ class App extends Component {
     this.search();
   }
 
+  // get data from API
   getAllRecipes = () => {
     axios
       .get('/getAllRecipes')
@@ -41,6 +41,7 @@ class App extends Component {
     this.search();
   }
 
+  // get selected delete record data
   deleteRecord = value => {
     console.log('to delete: ', value);
     const query = `/deleterecipe?title=${value}`;
@@ -54,7 +55,7 @@ class App extends Component {
       });
   };
  
-  
+  // search function
   search(a = null){
     
     if(this.state.loading === true){
@@ -86,9 +87,13 @@ class App extends Component {
     }
     this.setState({text:'search'})
   }
+
+  // user iput
   handleChange = (e)=>{
     this.setState({search:e.target.value})
   }
+
+  // when click search button will call search function
   async onClick2(e) {
       this.state.loading = true;
       await this.search('1');
@@ -147,6 +152,19 @@ class App extends Component {
         </div>
 
         <Recipes recipes={this.state.recipes}/>
+
+        <footer>
+          <div className="footer">
+            <div style={{color:"white"}}>Icons made by 
+              <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev"> Nikita Golubev</a> from 
+              <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+            </div>
+            <div style={{color:"white"}}>
+              Powered by
+              <a href="https://www.edamam.com/" title="Edaman"> Edaman </a>
+            </div>
+          </div>
+        </footer>
         
       </div>
     );

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from "react-router-dom";
 
+// Show searched API result which is the food recipe with title and "View Recipe" button to link to Detail Recipe page in EachRecipe.js
 const Recipes = props => (
     <div>
         <div className="container" id="error-message" style={{"display":"none"}}>
