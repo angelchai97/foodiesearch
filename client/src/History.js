@@ -23,6 +23,7 @@ class History extends Component{
     loadColumn(){
         axios.post('/searchHistory').then(res=>{
             this.setState({posts:res.data})
+            console.log(res.data)
         })
     }
     deleteRecord(data){
